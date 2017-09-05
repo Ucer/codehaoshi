@@ -5,6 +5,10 @@
   <a href="https://www.codehaoshi.com">
     <img src="http://ovdt3w8zp.bkt.clouddn.com/2017-09-05%2010-59-03%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" width=800>
   </a>
+  <br>
+  <a href="https://www.codehaoshi.com">
+    <img src="http://ovdt3w8zp.bkt.clouddn.com/2017-09-05%2011-23-07%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" width=800>
+  </a>
 </p>
 
 ---
@@ -20,6 +24,7 @@
 ## 功能清单
 
 - 用户注册登录
+- 权限系统
 - 修改 & 找回密码
 - 推文 & 发表问题
 - 文章点告赞 & 评论
