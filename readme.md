@@ -105,6 +105,8 @@ php artisan bindAdmin:Ucer
 
 ```
 
+如果在使用过程中碰到任何问题，请在本站对 [开源项目问答](https://codehaoshi.com/q/opensource_project) 的问题专区进行提问
+
 ## 任务调度
 
 - 每天 24点 备份一次数据库
