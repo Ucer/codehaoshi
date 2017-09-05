@@ -11,12 +11,20 @@
 # Code 好事
 
 ## 项目描述
-该项目用来记录日常开发的笔记，后台使用 [ucer-admin](https://github.com/Ucer/ucer-admin) 管理系统开发。ucer-admin 完全开源。
+该项目用来记录日常开发的笔记，用 laravel 与 vue 构建。后台使用 [ucer-admin](https://github.com/Ucer/ucer-admin) 管理系统开发。代码完全开源。
 
 * 产品名称：Code 好事
 * 项目代码：Code 好事
 * 官方地址：http://codehaoshi.com
 
+## 功能清单
+
+- 用户注册登录
+- 修改 & 找回密码
+- 推文 & 发表问题
+- 文章点告赞 & 评论
+- 用户关注
+- 数据备份
 
 ## 运行环境
 
@@ -97,6 +105,12 @@ php artisan bindAdmin:Ucer
 
 ```
 
+## 任务调度
+
+- 每天 24点 备份一次数据库
+- 每周备份一次 整个项目代码
+- 备份成功与否结果以邮件形式通知
+- 请手动清理备份文件
 
 ## Contributors
 
