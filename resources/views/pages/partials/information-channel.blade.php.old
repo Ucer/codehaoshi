@@ -1,0 +1,99 @@
+<div class="ui four wide column center container">
+    <div class="ui grid">
+        <div class="ui vertical divider home-page-divider default-color-a"><i class="fire icon"></i>&nbsp;&nbsp;资讯频道
+        </div>
+    </div>
+    <div class="ui link cards">
+        <div class="card">
+            <div class="image">
+                <img src="http://codehaoshi.app/images/article-cat.png">
+            </div>
+            <div class="content">
+                <div class="header">Matt Giampietro</div>
+                <div class="meta">
+                    <a>好友</a>
+                </div>
+                <div class="description">Matthew is an interior designer living in New York.</div>
+            </div>
+            <div class="extra content">
+                <span class="right floated">2013年加入 </span>
+                <span><i class="user icon"></i> 75 Friends </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ui middle aligned four column centered grid">
+    <div class="row">
+        <div class="ui grid">
+            <div class="ui vertical divider home-page-divider default-color-a"><i class="fire icon"></i>&nbsp;&nbsp;资讯频道
+            </div>
+        </div>
+        <div class="column">
+            <div class=" ui link card small-card ">
+                <div class="image">
+                    <img src="{{ $categoryList['0']->image_url }}">
+                </div>
+                <div class="content">
+                    <a href="{{ url('/a/'.$categoryList['0']->slug) }}">
+                        <div class="header">{{ $categoryList['0']->name }}</div>
+                    </a>
+                    <div class="description">{{ $categoryList['0']->description }}</div>
+                </div>
+                <div class="extra content green">
+                    <span class="right floated">更新于 {{ $categoryList['0']->created_at->diffForHumans() }}</span>
+                    <span><i class="file text icon"></i> {{ $categoryList['0']->article_count }}篇文章</span>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class=" ui link card small-card ">
+                <div class="image">
+                    <img src="{{ $categoryList['1']->image_url }}">
+                </div>
+                <div class="content">
+                    <a href="{{ url('/a/'.$categoryList['1']->slug) }}">
+                        <div class="header">{{ $categoryList['1']->name }}</div>
+                    </a>
+                    <div class="description">{{ $categoryList['1']->description }}</div>
+                </div>
+                <div class="extra content green">
+                    <span class="right floated">更新于 {{ $categoryList['1']->created_at->diffForHumans() }}</span>
+                    <span><i class="file text icon"></i> {{ $categoryList['1']->article_count }}篇文章</span>
+                </div>
+            </div>
+            <div class=" ui link card small-card ">
+                <div class="image">
+                    <img src="{{ $categoryList['2']->image_url }}">
+                </div>
+                <div class="content">
+                    <a href="{{ url('/a/'.$categoryList['2']->slug) }}">
+                        <div class="header">{{ $categoryList['2']->name }}</div>
+                    </a>
+                    <div class="description">{{ $categoryList['2']->description }}</div>
+                </div>
+                <div class="extra content green">
+                    <span class="right floated">更新于 {{ $categoryList['2']->created_at->diffForHumans() }}</span>
+                    <span><i class="file text icon"></i> {{ $categoryList['2']->article_count }}篇文章</span>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class=" ui link card small-card ">
+                <div class="image">
+                    <img src="{{ $categoryList['3']->image_url }}">
+                </div>
+                <div class="content">
+                    <a href="{{ url('/a/'.$categoryList['3']->slug) }}">
+                        <div class="header">{{ $categoryList['3']->name }}</div>
+                    </a>
+                    <div class="description">{{ $categoryList['3']->description }}</div>
+                </div>
+                <div class="extra content green">
+                    <span class="right floated">更新于 {{ $categoryList['3']->created_at->diffForHumans() }}</span>
+                    <span><i class="file text icon"></i> {{ $categoryList['3']->article_count }}篇文章</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> {{--资讯频道--}}

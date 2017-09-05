@@ -1,0 +1,68 @@
+@extends('layouts.base')
+@section('title','文章详情')
+@section('content')
+    <div class="ui container grid">
+        <div class="column">
+            <div class="ui breadcrumb">
+                <a href="/" class="section">首页</a>
+                <span class="divider">/</span>
+                <a href="/all_articles" class="section">资源</a>
+                <span class="divider">/</span>
+                <a href="articles" class="section">{{ $info->category->name }}</a>
+                <span class="divider">/</span>
+                <div class="active section">{{ $info->title }}</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ui centered grid container stackable" id="content">
+        <div class="twelve wide column">
+            <div class="ui segment article-content">
+                <div class="extra-padding">
+                    <h1>
+                        <span style="line-height: 34px;">{{ $info->title }}</span>
+                    </h1>
+                    <p class="book-article-meta ui description">
+                        <i class="attach icon"></i>
+                        {{ $info->description }}
+                    </p>
+                    <p class="book-article-meta description">
+                        <i class="wait icon"></i> <span class="header">Post on </span> <span
+                                class="default-color-a">{{ substr($info->created_at, 0, -8) }}</span>
+                        <span class="header">by</span>
+                        <a href=""><i class="icon user"></i> <span class="ui popover default-color-a" data-title="ucer"
+                                                                   data-content="好好学习，天天向上">{{ $info->user->user_name }}</span></a>
+                    </p>
+                </div>
+                <div class="ui divider"></div>
+                <div class="ui readme markdown-body content-body" >
+                    <parse content="{{ $info->content['raw']  }}"></parse>
+
+                </div>
+            </div>
+            <div>
+                <a class="ui basic button small  popover" data-content="1.4. 如何正确阅读本书？" href=""><i
+                            class="icon arrow left"></i> 上一篇</a>
+                <a class="ui basic button small popover right floated" data-content="1.6. 发行说明" href="">下一篇 <i
+                            class="icon arrow right"></i></a>
+            </div>
+            <div class="ui message basic">
+                <div class="social-share share-component">
+                    分享
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            @if(!Auth::check())
+                <comment  article-id="{{ $info->id }}" is-checked="false"  comment_count="{{ $info->comment_count }}"></comment>
+            @else
+                <comment user-avatar="{{ $authUser->avatar }}"  userid="{{ $authUser->id }}" article-id="{{ $info->id }}" is-checked="true" :comment_count="{{ $info->comment_count }}"></comment>
+            @endif
+        </div>
+        <div class="four wide column">
+            @include('articles.partials.info-right-item')
+        </div>
+    </div>
+@endsection
+

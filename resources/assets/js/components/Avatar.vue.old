@@ -1,0 +1,46 @@
+<template>
+    <div class="cover-avatar text-center">
+        <a href="javascript:;" class="btn-success-m file">
+            <span>修改头像</span>
+            <input type="file" name="avatar" class="file-m" @change="upload">
+        </a>
+    </div>
+</template>
+
+<script>
+    import Cropper from '../components/Cropper'
+    export default {
+        props: {
+            src: {
+                type: String,
+                default() {
+                    return ''
+                }
+            }
+        },
+        data() {
+            return {
+                cropImage: undefined,
+                dialogVisible: false,
+                imageType: 'image/png,image/gif,image/jpeg,image/jpg,image/tiff'
+            }
+        },
+        methods: {
+            upload(e) {
+                let image = e.target.files[0];
+                let formData = new FormData();
+
+                formData.append('myfile', image);
+                formData.append('path', 'avatar');
+
+                this.$http.post('file/upload', formData)
+                    .then((response) => {
+                        this.cropImage = response.data;
+
+                        this.dialogVisible = true
+                    })
+
+            },
+        }
+    }
+</script>
