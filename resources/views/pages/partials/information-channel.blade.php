@@ -9,7 +9,8 @@
                 @forelse($categoryList as $v)
                 <div class="card">
                     <a href="{{ url('/a/'. $v->slug) }}" class="image">
-                        <img src="{{ $v->image_url }}">
+                        <img data-src="{{ $v->image_url }}"   src="data:image/gif;base64,R0lGODlhAQABAAA
+       AACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazeload">
                     </a>
                     <div class="content">
                         <a href="{{ url('/a/'. $v->slug) }}" class="header">{{ $v->name }}</a>
