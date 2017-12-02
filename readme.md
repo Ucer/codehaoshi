@@ -85,7 +85,7 @@ config/app.php
 - 文件权限问题
 ```text
 chmod 777 -R public ;
-chmod 777 -R storage ;
+chmod 777 -R storage/log storage/framework;
 ```
 
 - 安装
