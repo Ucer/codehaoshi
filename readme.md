@@ -19,7 +19,7 @@
 
 * 产品名称：Code 好事
 * 项目代码：Code 好事
-* 官方地址：http://codehaoshi.com
+* 官方地址：https://codehaoshi.com
 
 ## 功能清单
 
@@ -121,7 +121,7 @@ php artisan bindAdmin:Ucer
 
 ## Contributors
 
-- [Code 好事](http://codehaoshi.com)
+- [Code 好事](https://codehaoshi.com)
 
 
 
