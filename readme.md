@@ -20,7 +20,8 @@
 * 产品名称：Code 好事
 * 项目代码：Code 好事
 * 官方地址：https://codehaoshi.com
-* vue& laravel 开发的后台管理系统：请移歨 [lucms](https://gitee.com/zhjaa/lucms)
+* vue & laravel 开发的后台管理系统：请移歨 [lucms](https://gitee.com/zhjaa/lucms)
+
 ## 功能清单
 
 - 用户注册登录
